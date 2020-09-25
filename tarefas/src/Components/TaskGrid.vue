@@ -1,7 +1,10 @@
 <template>
     <div class="task-grid">
         <template>
-            <Task v-for="task in tasks" :key="task.name" :task="task"></Task>
+            <Task v-for="(task, i) in tasks" :key="task.name"
+             @taskDeleted="$emit('taskDeleted', i)"  
+             @taskStateChanged="$emit('taskStateChanged', i)" 
+             :task="task"></Task>
         </template>
         <p class="no-task"></p>
     </div>
@@ -33,6 +36,7 @@ export default {
     }
 
     .task {
+        position: relative;
         box-sizing: border-box;
         height: 150px;
         width: 350px;
