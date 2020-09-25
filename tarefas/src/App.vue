@@ -7,6 +7,7 @@
 		@taskDeleted="deleteTask" 
 		@taskStateChanged="toggleTaskState"
 		:tasks="tasks"/>
+		
 	</div>
 </template>
 
