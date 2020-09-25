@@ -33,5 +33,6 @@ export default {
     }
     .progress-value{
         z-index: 2;
+        color: black;
     }
 </style>
